@@ -10,9 +10,9 @@ namespace Palindrome.Domain {
                 backwards[forwards.Length - i - 1] = forwards[i];
             }
 
-            Console.WriteLine(forwards);
-            Console.WriteLine(backwards);
-
+            for(int i = 0; i < forwards.Length; i++) {
+                if(forwards[i] != backwards[i]) return false;
+            }
             return true;
         }
     }
